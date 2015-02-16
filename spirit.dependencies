@@ -6,10 +6,10 @@
     "revision": "cm-12.0"
   },
   {
-    "remote": "cm",
+    "remote": "sr",
     "repository": "android_kernel_samsung_ks01lte",
     "target_path": "kernel/samsung/ks01lte",
-    "revision": "cm-12.0"
+    "revision": "lollipop"
   },
   {
     "remote": "cm",
