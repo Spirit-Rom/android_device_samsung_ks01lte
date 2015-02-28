@@ -739,9 +739,6 @@ on post-fs-data
     mkdir /data/wpstiles/ 0755 shell
     mkdir /data/wiper 0755 gps qcom_oncrpc
 
-    #Create directories for gpsone_daemon services
-    mkdir /data/misc/location/gpsone_d 0770 system gps
-
     #Create directories for QuIPS
     mkdir /data/misc/quipc 0770 system gps
 
@@ -749,6 +746,9 @@ on post-fs-data
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
+    mkdir /data/misc/location/gpsone_d 0770 system gps
+    mkdir /data/misc/location/quipc 0770 gps gps
+    mkdir /data/misc/location/gsiff 0770 gps gps
 
     #Create directory from IMS services
     mkdir /data/shared 0755
@@ -856,6 +856,7 @@ on property:init.svc.bootanim=stopped
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90 1800000:70"
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 100000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
 
     write /sys/module/cpu_boost/parameters/boost_ms 10
     write /sys/module/cpu_boost/parameters/sync_threshold 1728000
