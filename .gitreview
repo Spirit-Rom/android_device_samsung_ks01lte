@@ -1,0 +1,5 @@
+[gerrit]
+host=review.spirit-rom.com
+port=29418
+project=android_device_samsung_ks01lte.git
+defaultbranch=lollipop
