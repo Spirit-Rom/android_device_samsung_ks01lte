@@ -1,5 +1,7 @@
 $(call inherit-product, device/samsung/ks01lte/full_ks01lte.mk)
 
+include device/samsung/ks01lte/sm.mk
+
 # Enhanced NFC
 $(call inherit-product, vendor/spirit/config/nfc_enhanced.mk)
 
